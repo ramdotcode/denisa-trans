@@ -1,0 +1,17 @@
+[
+  {
+    "nama": "Full AC",
+    "deskripsi": "Sistem pendingin udara yang selalu prima untuk menjaga suhu kabin tetap sejuk.",
+    "icon": "fas fa-snowflake"
+  },
+  {
+    "nama": "Reclining Seat",
+    "deskripsi": "Kursi ekonomis namun fleksibel yang dapat diatur kemiringannya.",
+    "icon": "fas fa-couch"
+  },
+  {
+    "nama": "Charger HP",
+    "deskripsi": "Tersedia port USB/Power outlet di setiap baris kursi.",
+    "icon": "fas fa-battery-three-quarters"
+  }
+]

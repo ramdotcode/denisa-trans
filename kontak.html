@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak Kami | Denisa Trans</title>
+    <meta name="description" content="Hubungi Denisa Trans untuk pemesanan tiket travel door to door dan rental mobil ke Jakarta dan Jabodetabek.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="menu-overlay" id="menu-overlay"></div>
+    <!-- Header -->
+    <header id="header" class="scrolled">
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">DENISA <span>TRANS</span></a>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="profil.html">Tentang Kami</a></li>
+                    <li class="dropdown">
+                        <a href="layanan.html">Layanan <i class="fas fa-chevron-down" style="font-size: 0.7rem;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="layanan-door-to-door.html">Door to Door</a></li>
+                            <li><a href="layanan-tour-wisata.html">Tour Wisata</a></li>
+                            <li><a href="layanan-rental-mobil.html">Rental Mobil</a></li>
+                            <li><a href="layanan-titip-paket.html">Titipan Paket</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="fasilitas.html">Fasilitas</a></li>
+                    <li><a href="rute.html">Rute</a></li>
+                    <li><a href="kontak.html" style="color: var(--primary); font-weight: 700;">Kontak</a></li>
+                </ul>
+                <a href="https://wa.me/6288971186002" class="btn-booking desktop-only">Pesan Sekarang</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Kontak Kami</h1>
+            <p>Admin Kami Siap Melayani Anda 24 Jam</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="section">
+        <div class="container contact-wrapper">
+            
+            <!-- Contact Info -->
+            <div class="contact-info-box">
+                <h2 style="font-size: 2rem; margin-bottom: 20px; font-family: 'Outfit', sans-serif;">Informasi Kontak</h2>
+                <p style="margin-bottom: 30px; opacity: 0.9;">Punya pertanyaan mengenai layanan atau butuh bantuan darurat? Hubungi kami melalui kontak di bawah ini.</p>
+                
+                <div style="display: flex; align-items: center; margin-bottom: 25px;">
+                    <div style="width: 50px; height: 50px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; margin-right: 15px;">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <div>
+                        <h4 style="margin-bottom: 5px; font-size: 1.1rem;">WhatsApp / Telepon</h4>
+                        <a href="https://wa.me/6288971186002" style="color: var(--white); font-weight: bold; font-size: 1.1rem;">0889-7118-6002</a>
+                    </div>
+                </div>
+
+                <div style="display: flex; align-items: center; margin-bottom: 25px;">
+                    <div style="width: 50px; height: 50px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; margin-right: 15px;">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div>
+                        <h4 style="margin-bottom: 5px; font-size: 1.1rem;">Email</h4>
+                        <p style="margin: 0; opacity: 0.9;">info@denisatrans.com</p>
+                    </div>
+                </div>
+
+                <div style="display: flex; align-items: center;">
+                    <div style="width: 50px; height: 50px; background: rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; margin-right: 15px;">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div>
+                        <h4 style="margin-bottom: 5px; font-size: 1.1rem;">Alamat Kantor</h4>
+                        <p style="margin: 0; opacity: 0.9;">Bandung, Jawa Barat, Indonesia.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div>
+                <h2 style="font-size: 2rem; color: var(--primary); margin-bottom: 20px; font-family: 'Outfit', sans-serif;">Pesan Tiket Cepat</h2>
+                <p style="color: var(--text-muted); margin-bottom: 30px;">Isi formulir simpel di bawah ini untuk pemesanan cepat, setelah klik kirim akan otomatis membuka chat WhatsApp admin kami.</p>
+                <form class="contact-form" onsubmit="sendToWhatsApp(event)">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                        <input type="text" id="wa-name" placeholder="Nama Lengkap" required>
+                        <input type="number" id="wa-phone" placeholder="No HP Aktif" required>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                        <input type="text" id="wa-from" placeholder="Alamat Jemput" required>
+                        <input type="text" id="wa-to" placeholder="Tujuan Turun" required>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                        <input type="date" id="wa-date" required>
+                        <select id="wa-persons" required>
+                            <option value="">Jumlah Penumpang</option>
+                            <option value="1">1 Orang</option>
+                            <option value="2">2 Orang</option>
+                            <option value="3">3 Orang</option>
+                            <option value="4+">4 Orang / Lebih</option>
+                        </select>
+                    </div>
+                    <textarea id="wa-notes" rows="3" placeholder="Catatan Tambahan (Jam Penerbangan, Balita, dll)"></textarea>
+                    
+                    <button type="submit" class="btn-booking" style="width: 100%; border-radius: 8px; font-size: 1.1rem; padding: 15px;">Kirim Pesanan ke WhatsApp <i class="fas fa-paper-plane" style="margin-left: 5px;"></i></button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h2 class="logo" style="color: white; margin-bottom: 20px;">DENISA <span>TRANS</span></h2>
+                    <p style="color: #ccc;">Layanan Travel & Transportasi terpercaya di Bandung. Mengedepankan kenyamanan dan keamanan penumpang.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Link Cepat</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="profil.html">Tentang Kami</a></li>
+                        <li><a href="layanan.html">Layanan</a></li>
+                        <li><a href="rute.html">Informasi Rute</a></li>
+                        <li><a href="fasilitas.html">Fasilitas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Kontak Kami</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://wa.me/6288971186002"><i class="fas fa-phone"></i> +62 889 7118 6002</a></li>
+                        <li><i class="fas fa-envelope"></i> info@denisatrans.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Bandung, Jawa Barat</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 Denisa Trans. All Rights Reserved. Built with <i class="fas fa-heart" style="color: #e74c3c;"></i> for Satuin.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/6288971186002" class="wa-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.getElementById('nav-links');
+        const overlay = document.getElementById('menu-overlay');
+
+        if(mobileMenu) {
+            mobileMenu.addEventListener('click', () => {
+                mobileMenu.classList.toggle('active');
+                navLinks.classList.toggle('active');
+                overlay.classList.toggle('active');
+                
+                if (!navLinks.classList.contains('active')) {
+                    document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('active'));
+                }
+            });
+        }
+
+        if(overlay) {
+            overlay.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                navLinks.classList.remove('active');
+                overlay.classList.remove('active');
+                document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('active'));
+            });
+        }
+
+        if(overlay) {
+            overlay.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                navLinks.classList.remove('active');
+                overlay.classList.remove('active');
+                document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('active'));
+            });
+        }
+
+        // Mobile Dropdown Toggle
+        document.querySelectorAll('.dropdown > a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    this.parentElement.classList.toggle('active');
+                }
+            });
+        });
+
+        // WhatsApp Form Auto Generator
+        function sendToWhatsApp(e) {
+            e.preventDefault();
+            const name = document.getElementById('wa-name').value;
+            const phone = document.getElementById('wa-phone').value;
+            const from = document.getElementById('wa-from').value;
+            const to = document.getElementById('wa-to').value;
+            const date = document.getElementById('wa-date').value;
+            const persons = document.getElementById('wa-persons').value;
+            const notes = document.getElementById('wa-notes').value;
+
+            // Format Tanggal
+            const dateObj = new Date(date);
+            const formattedDate = dateObj.toLocaleDateString('id-ID', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+
+            const text = `Halo Admin Denisa Trans, saya ingin pesan tiket:%0A%0A*Nama:* ${name}%0A*No HP Aktif:* ${phone}%0A*Titik Jemput:* ${from}%0A*Tujuan:* ${to}%0A*Tanggal:* ${formattedDate}%0A*Jumlah:* ${persons} Orang${notes ? `%0A*Catatan:* ${notes}` : ''}%0A%0AMohon info ketersediaan jam keberangkatannya ya. Terima kasih!`;
+            
+            const waNumber = '6288971186002';
+            window.open(`https://wa.me/${waNumber}?text=${text}`, '_blank');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denisa Trans | Layanan Travel Door to Door & Rental Mobil Premium</title>
+    <meta name="description" content="Layanan transportasi travel door to door, rental mobil Hiace, Elf, Innova, dan titipan paket kilat terbaik di Bandung dan Jabodetabek.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="menu-overlay" id="menu-overlay"></div>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">DENISA <span>TRANS</span></a>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html" style="color: var(--primary); font-weight: 700;">Home</a></li>
+                    <li><a href="profil.html">Tentang Kami</a></li>
+                    <li class="dropdown">
+                        <a href="layanan.html">Layanan <i class="fas fa-chevron-down" style="font-size: 0.7rem;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="layanan-door-to-door.html">Door to Door</a></li>
+                            <li><a href="layanan-tour-wisata.html">Tour Wisata</a></li>
+                            <li><a href="layanan-rental-mobil.html">Rental Mobil</a></li>
+                            <li><a href="layanan-titip-paket.html">Titipan Paket</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="fasilitas.html">Fasilitas</a></li>
+                    <li><a href="rute.html">Rute</a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
+                </ul>
+                <a href="https://wa.me/6288971186002" class="btn-booking desktop-only">Pesan Sekarang</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('hero-bg.png');">
+        <div class="container hero-content">
+            <h1 style="font-family: 'Outfit', sans-serif;">Perjalanan Nyaman, <br>Sampai ke Tujuan.</h1>
+            <p>Penyedia Travel Door to Door & Charter Mobil Profesional. Melayani Rute Bandung - Jakarta - Jabodetabek 24 Jam.</p>
+            <div class="hero-btns">
+                <a href="https://wa.me/6288971186002" class="btn-booking" style="background: transparent; border: 2px solid white; padding: 12px 35px; font-size: 1.1rem;">Hubungi Kami</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Bar -->
+    <section class="booking-bar" id="booking">
+        <div class="container">
+            <div class="booking-inner">
+                <div class="input-group">
+                    <label>Kota Asal</label>
+                    <input type="text" id="cek-asal" placeholder="Contoh: Bandung">
+                </div>
+                <div class="input-group">
+                    <label>Kota Tujuan</label>
+                    <input type="text" id="cek-tujuan" placeholder="Contoh: Jakarta">
+                </div>
+                <div class="input-group">
+                    <label>Tanggal</label>
+                    <input type="date" id="cek-tanggal">
+                </div>
+                <div class="input-group">
+                    <label>Penumpang</label>
+                    <select id="cek-penumpang">
+                        <option value="1 Orang">1 Orang</option>
+                        <option value="2 Orang">2 Orang</option>
+                        <option value="3 Orang">3 Orang</option>
+                        <option value="4 Orang+">4 Orang+</option>
+                    </select>
+                </div>
+                <button class="btn-search" onclick="cekTarifWA()">CEK TARIF</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantages Ticker -->
+    <section class="advantages">
+        <div class="ticker-wrapper">
+            <div class="ticker">
+                <div class="advantage-item"><i class="fas fa-check-circle"></i> Door to Door Service</div>
+                <div class="advantage-item"><i class="fas fa-snowflake"></i> Full AC & Musik</div>
+                <div class="advantage-item"><i class="fas fa-bolt"></i> Free Charger HP</div>
+                <div class="advantage-item"><i class="fas fa-shield-alt"></i> Driver Berpengalaman</div>
+                <div class="advantage-item"><i class="fas fa-clock"></i> Keberangkatan Setiap Hari</div>
+                <div class="advantage-item"><i class="fas fa-tags"></i> Harga Terjangkau</div>
+                <!-- Repeat for infinite feel -->
+                <div class="advantage-item"><i class="fas fa-check-circle"></i> Door to Door Service</div>
+                <div class="advantage-item"><i class="fas fa-snowflake"></i> Full AC & Musik</div>
+                <div class="advantage-item"><i class="fas fa-bolt"></i> Free Charger HP</div>
+                <div class="advantage-item"><i class="fas fa-shield-alt"></i> Driver Berpengalaman</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>Selamat Datang di Denisa Trans</h2>
+                <p>Kami adalah mitra perjalanan terpercaya Anda yang mengutamakan keselamatan, kenyamanan, dan ketepatan waktu. Dengan armada terbaru dan driver profesional, kami menjamin pengalaman perjalanan yang tak terlupakan.</p>
+            </div>
+            <div class="services-grid" style="grid-template-columns: 1fr 1fr; align-items: center; gap: 50px;">
+                <div style="border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-lg);">
+                    <img src="hero-bg.png" alt="Tentang Denisa Trans" style="width: 100%; display: block;">
+                </div>
+                <div class="about-text">
+                    <h3 style="font-size: 2rem; color: var(--primary); margin-bottom: 20px;">Mengapa Harus Kami?</h3>
+                    <ul style="margin-bottom: 30px;">
+                        <li style="display: flex; gap: 15px; margin-bottom: 20px; align-items: flex-start;">
+                            <i class="fas fa-star" style="color: var(--secondary); font-size: 1.2rem; margin-top: 5px;"></i>
+                            <div>
+                                <h4 style="margin-bottom: 5px;">Pelayanan Premium</h4>
+                                <p style="color: var(--text-muted);">Kami memberikan layanan kelas atas dengan harga yang tetap bersahabat bagi kantong Anda.</p>
+                            </div>
+                        </li>
+                        <li style="display: flex; gap: 15px; margin-bottom: 20px; align-items: flex-start;">
+                            <i class="fas fa-star" style="color: var(--secondary); font-size: 1.2rem; margin-top: 5px;"></i>
+                            <div>
+                                <h4 style="margin-bottom: 5px;">Armada Terawat</h4>
+                                <p style="color: var(--text-muted);">Kendaraan kami selalu mendapatkan perawatan rutin untuk memastikan perjalanan yang aman.</p>
+                            </div>
+                        </li>
+                        <li style="display: flex; gap: 15px; align-items: flex-start;">
+                            <i class="fas fa-star" style="color: var(--secondary); font-size: 1.2rem; margin-top: 5px;"></i>
+                            <div>
+                                <h4 style="margin-bottom: 5px;">Jemput di Rumah</h4>
+                                <p style="color: var(--text-muted);">Tidak perlu repot ke terminal, driver kami akan menjemput tepat di depan pintu rumah Anda.</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/6288971186002" class="btn-booking">Detail Selengkapnya</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section" id="services" style="background: #f9f9f9;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Layanan Unggulan Kami</h2>
+                <p>Berbagai pilihan layanan transportasi yang bisa disesuaikan dengan kebutuhan perjalanan Anda.</p>
+            </div>
+            <div class="services-grid" id="cms-services-container">
+                <!-- Data will be loaded from data/layanan.json -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Routes Section -->
+    <section class="section" id="routes">
+        <div class="container">
+            <div class="section-header">
+                <h2>Rute Keberangkatan</h2>
+                <p>Wilayah jangkauan layanan Denisa Trans yang siap melayani Anda setiap hari.</p>
+            </div>
+            <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+                <div style="text-align: center; padding: 20px; background: white; border-radius: 15px; box-shadow: var(--shadow-sm);">
+                    <i class="fas fa-map-marker-alt" style="font-size: 2rem; color: var(--secondary); margin-bottom: 15px;"></i>
+                    <h4 style="margin-bottom: 5px;">BANDUNG</h4>
+                    <p style="font-size: 0.9rem; color: #888;">Kota Asal / Tujuan</p>
+                </div>
+                <div style="display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: #ddd;">
+                    <i class="fas fa-long-arrow-alt-right"></i>
+                </div>
+                <div style="text-align: center; padding: 20px; background: white; border-radius: 15px; box-shadow: var(--shadow-sm);">
+                    <i class="fas fa-city" style="font-size: 2rem; color: var(--primary); margin-bottom: 15px;"></i>
+                    <h4 style="margin-bottom: 5px;">JAKARTA</h4>
+                    <p style="font-size: 0.9rem; color: #888;">Pusat / Bandara</p>
+                </div>
+                <div style="text-align: center; padding: 20px; background: white; border-radius: 15px; box-shadow: var(--shadow-sm);">
+                    <i class="fas fa-city" style="font-size: 2rem; color: var(--primary); margin-bottom: 15px;"></i>
+                    <h4 style="margin-bottom: 5px;">BEKASI</h4>
+                    <p style="font-size: 0.9rem; color: #888;">Kota Penyangga</p>
+                </div>
+                <div style="text-align: center; padding: 20px; background: white; border-radius: 15px; box-shadow: var(--shadow-sm);">
+                    <i class="fas fa-city" style="font-size: 2rem; color: var(--primary); margin-bottom: 15px;"></i>
+                    <h4 style="margin-bottom: 5px;">TANGERANG</h4>
+                    <p style="font-size: 0.9rem; color: #888;">Layanan Bandara</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jadwal Keberangkatan -->
+    <section class="section" style="background: var(--primary); color: white;">
+        <div class="container">
+            <div class="section-header">
+                <h2 style="color: white; margin-bottom: 20px; font-family: 'Outfit', sans-serif;">Jam Keberangkatan</h2>
+                <p style="color: rgba(255,255,255,0.8);">Kami berangkat setiap hari dengan jadwal reguler yang pasti berangkat tanpa batas minimal penumpang. *Jam menyesuaikan titik jemput.</p>
+            </div>
+            <div class="schedule-container">
+                <div class="schedule-box">
+                    <p style="color: var(--text-muted); font-weight: bold; text-transform: uppercase;">Jadwal Pagi</p>
+                    <h3>08:00 WIB</h3>
+                </div>
+                <div class="schedule-box">
+                    <p style="color: var(--text-muted); font-weight: bold; text-transform: uppercase;">Jadwal Siang</p>
+                    <h3>14:00 WIB</h3>
+                </div>
+                <div class="schedule-box">
+                    <p style="color: var(--text-muted); font-weight: bold; text-transform: uppercase;">Jadwal Malam</p>
+                    <h3>20:00 WIB</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimoni / Apa Kata Mereka -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 style="font-family: 'Outfit', sans-serif;">Apa Kata Mereka?</h2>
+                <p>Ulasan langsung dari penumpang setia Denisa Trans.</p>
+            </div>
+            <div class="testimonials-grid">
+                <!-- Testi 1 -->
+                <div class="testimonial-card">
+                    <div style="color: var(--secondary); margin-bottom: 15px; font-size: 1.2rem;">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>"Perjalanannya sangat nyaman. Sopirnya profesional bawa mobilnya pelan tapi pasti sampai. Apalagi AC nya dingin dan wangi banget!"</p>
+                    <div class="testi-user">
+                        <div class="testi-avatar" style="background: var(--primary);">B</div>
+                        <div>
+                            <h4 style="font-size: 1rem; margin:0;">Budi Santoso</h4>
+                            <span style="font-size: 0.8rem; color: #888;">Penumpang JKT - BDG</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testi 2 -->
+                <div class="testimonial-card">
+                    <div style="color: var(--secondary); margin-bottom: 15px; font-size: 1.2rem;">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>"Jarang nemu travel yang beneran dijemput sampai depan pintu rumah banget. Adminnya juga gampang dihubungi kalau ada apa-apa."</p>
+                    <div class="testi-user">
+                        <div class="testi-avatar" style="background: var(--secondary);">S</div>
+                        <div>
+                            <h4 style="font-size: 1rem; margin:0;">Siti Aminah</h4>
+                            <span style="font-size: 0.8rem; color: #888;">Langganan Tiap Minggu</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testi 3 -->
+                <div class="testimonial-card">
+                    <div style="color: var(--secondary); margin-bottom: 15px; font-size: 1.2rem;">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p>"Paket kilatnya juara! Kirim dokumen kantor dari Bandung jam 8 pagi, jam 3 sore udah nyampe di kantor Jakarta. Cepat & Aman."</p>
+                    <div class="testi-user">
+                        <div class="testi-avatar" style="background: var(--accent);">R</div>
+                        <div>
+                            <h4 style="font-size: 1rem; margin:0;">Reza Firmansyah</h4>
+                            <span style="font-size: 0.8rem; color: #888;">Pengguna Titip Paket</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeri -->
+    <section class="section" style="background: var(--light);">
+        <div class="container">
+            <div class="section-header">
+                <h2 style="font-family: 'Outfit', sans-serif;">Galeri Kami</h2>
+                <p>Menengok kegiatan operasional, armada, dan momen perjalanan kami bersama penumpang setia.</p>
+            </div>
+            <!-- Nantinya gambar aslinya tinggal disisipkan menggunakan background-image di dalam class gallery-item -->
+            <div class="gallery-grid">
+                <div class="gallery-item" style="background-image: url('hero-bg.png'); background-size: cover; background-position: center; border:none;"></div>
+                <div class="gallery-item"><i class="fas fa-image"></i></div>
+                <div class="gallery-item"><i class="fas fa-image"></i></div>
+                <div class="gallery-item"><i class="fas fa-image"></i></div>
+                <div class="gallery-item"><i class="fas fa-image"></i></div>
+                <div class="gallery-item"><i class="fas fa-image"></i></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Artikel -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 style="font-family: 'Outfit', sans-serif;">Berita & Artikel</h2>
+                <p>Temukan tulisan informatif seputar tips traveling dan info layanan terbaru dari kami.</p>
+            </div>
+            <div class="articles-grid">
+                <!-- Article 1 -->
+                <div class="article-card">
+                    <div class="article-img"><i class="fas fa-newspaper" style="font-size: 3rem;"></i></div>
+                    <div class="article-content">
+                        <span class="article-date">20 April 2026</span>
+                        <h3 style="font-size: 1.2rem; margin-bottom: 10px; color: var(--dark);">Tips Perjalanan Darat Nyaman</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">Menghadapi cuaca tak tertebak, penting mempersiapkan barang-barang kecil agar tetap bugar selama perjalanan jauh...</p>
+                        <a href="javascript:void(0)" style="color: var(--primary); font-size: 0.9rem; font-weight: bold; margin-top: 15px; display: inline-block;">Baca Selengkapnya &rarr;</a>
+                    </div>
+                </div>
+                <!-- Article 2 -->
+                <div class="article-card">
+                    <div class="article-img"><i class="fas fa-car" style="font-size: 3rem;"></i></div>
+                    <div class="article-content">
+                        <span class="article-date">10 April 2026</span>
+                        <h3 style="font-size: 1.2rem; margin-bottom: 10px; color: var(--dark);">Promo Charter Mobil Keluarga</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">Menyambut musim liburan, Denisa Trans menghadirkan promo diskon sewa armada Innova lengkap dengan pengemudi...</p>
+                        <a href="javascript:void(0)" style="color: var(--primary); font-size: 0.9rem; font-weight: bold; margin-top: 15px; display: inline-block;">Baca Selengkapnya &rarr;</a>
+                    </div>
+                </div>
+                <!-- Article 3 -->
+                <div class="article-card">
+                    <div class="article-img"><i class="fas fa-map-marked-alt" style="font-size: 3rem;"></i></div>
+                    <div class="article-content">
+                        <span class="article-date">01 April 2026</span>
+                        <h3 style="font-size: 1.2rem; margin-bottom: 10px; color: var(--dark);">Rekomendasi Oleh-oleh Khas </h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">Selesai urusan di Bandung? Tidak afdal rasanya jika belum memborong cendera mata kerajinan dan cemilan otentik berikut...</p>
+                        <a href="javascript:void(0)" style="color: var(--primary); font-size: 0.9rem; font-weight: bold; margin-top: 15px; display: inline-block;">Baca Selengkapnya &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h2 class="logo" style="color: white; margin-bottom: 20px;">DENISA <span>TRANS</span></h2>
+                    <p style="color: #ccc;">Layanan Travel & Transportasi terpercaya di Bandung. Mengedepankan kenyamanan dan keamanan penumpang.</p>
+                    <div style="margin-top: 20px; display: flex; gap: 15px;">
+                        <a href="#" style="color: white; font-size: 1.5rem;"><i class="fab fa-instagram"></i></a>
+                        <a href="#" style="color: white; font-size: 1.5rem;"><i class="fab fa-facebook"></i></a>
+                        <a href="#" style="color: white; font-size: 1.5rem;"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Link Cepat</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="profil.html">Tentang Kami</a></li>
+                        <li><a href="layanan.html">Layanan</a></li>
+                        <li><a href="rute.html">Informasi Rute</a></li>
+                        <li><a href="fasilitas.html">Fasilitas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Kontak Kami</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-phone"></i> +62 889 7118 6002</li>
+                        <li><i class="fas fa-envelope"></i> info@denisatrans.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Bandung, Jawa Barat</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 Denisa Trans. All Rights Reserved. Built with <i class="fas fa-heart" style="color: #e74c3c;"></i> for Satuin.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/6288971186002" class="wa-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.getElementById('nav-links');
+        const overlay = document.getElementById('menu-overlay');
+        
+        if(mobileMenu) {
+            mobileMenu.addEventListener('click', () => {
+                mobileMenu.classList.toggle('active');
+                navLinks.classList.toggle('active');
+                overlay.classList.toggle('active');
+                
+                if (!navLinks.classList.contains('active')) {
+                    document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('active'));
+                }
+            });
+        }
+
+        if(overlay) {
+            overlay.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                navLinks.classList.remove('active');
+                overlay.classList.remove('active');
+                document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('active'));
+            });
+        }
+
+        // Mobile Dropdown Toggle
+        document.querySelectorAll('.dropdown > a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    this.parentElement.classList.toggle('active');
+                }
+            });
+        });
+        // WhatsApp Cek Tarif Logic
+        function cekTarifWA() {
+            const asal = document.getElementById('cek-asal').value || '(Belum diisi)';
+            const tujuan = document.getElementById('cek-tujuan').value || '(Belum diisi)';
+            const tanggalInput = document.getElementById('cek-tanggal').value;
+            const penumpang = document.getElementById('cek-penumpang').value;
+
+            let tanggalDiformat = '(Belum diisi)';
+            if (tanggalInput) {
+                const dateObj = new Date(tanggalInput);
+                tanggalDiformat = dateObj.toLocaleDateString('id-ID', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+            }
+
+            const text = `Halo Admin Denisa Trans, saya ingin cek tarif dan ketersediaan kursi untuk rute:%0A%0A*Kota Asal:* ${asal}%0A*Kota Tujuan:* ${tujuan}%0A*Tanggal:* ${tanggalDiformat}%0A*Jumlah Penumpang:* ${penumpang}%0A%0AMohon diinfokan harganya ya. Terima kasih.`;
+            
+            const waNumber = '6288971186002';
+            window.open(`https://wa.me/${waNumber}?text=${text}`, '_blank');
+        }
+    </script>
+    <script src="js/cms-sync.js"></script>
+</body>
+</html>

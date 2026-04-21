@@ -1,0 +1,60 @@
+content_path: data
+media_folder: assets/images
+
+collections:
+  - name: perusahaan
+    label: Profil Perusahaan
+    type: file
+    path: perusahaan.json
+    fields:
+      - name: nama
+        label: Nama Perusahaan
+        type: string
+      - name: tagline
+        label: Tagline (Hero Text)
+        type: string
+      - name: whatsapp
+        label: Nomor WhatsApp (Gunakan 62...)
+        type: string
+      - name: email
+        label: Email
+        type: string
+      - name: alamat
+        label: Alamat
+        type: string
+
+  - name: layanan
+    label: Daftar Layanan
+    type: list
+    path: layanan.json
+    fields:
+      - name: nama
+        label: Nama Layanan
+        type: string
+      - name: deskripsi
+        label: Deskripsi Singkat
+        type: text
+      - name: icon
+        label: Icon (FontAwesome class)
+        type: string
+      - name: link
+        label: Link Halaman
+        type: string
+
+  - name: rute
+    label: Daftar Rute
+    type: list
+    path: rute.json
+    fields:
+      - name: asal
+        label: Dari
+        type: string
+      - name: tujuan
+        label: Tujuan
+        type: string
+      - name: harga
+        label: Harga
+        type: string
+      - name: keterangan
+        label: Keterangan Short
+        type: string
