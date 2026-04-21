@@ -2,7 +2,7 @@ backend:
   name: github
   repo: ramdotcode/denisa-trans
   branch: main
-  base_url: https://your-proxy-name.vercel.app
+  base_url: https://netlify-cms-github-oauth-provider-eight.vercel.app/callback
   auth_endpoint: auth
 
 media_folder: "assets/images"
