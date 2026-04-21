@@ -41,9 +41,7 @@ async function syncCMSData() {
             
             servicesContainer.innerHTML = layanan.map(item => `
                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="${item.icon}"></i>
-                    </div>
+                    <div class="service-img" style="background-image: url('${item.gambar}');"></div>
                     <div class="service-content">
                         <h3>${item.nama}</h3>
                         <p>${item.deskripsi}</p>

@@ -36,7 +36,7 @@ collections:
             fields:
               - {label: "Nama Layanan", name: "nama", widget: "string"}
               - {label: "Deskripsi", name: "deskripsi", widget: "text"}
-              - {label: "Icon (FontAwesome)", name: "icon", widget: "string"}
+              - {label: "Gambar Layanan", name: "gambar", widget: "image"}
               - {label: "Link Page", name: "link", widget: "string"}
 
   - name: "data_rute"
