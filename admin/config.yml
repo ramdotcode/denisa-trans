@@ -1,0 +1,66 @@
+backend:
+  name: github
+  repo: ramdotcode/denisa-trans
+  branch: main
+
+media_folder: "assets/images"
+public_folder: "/assets/images"
+
+collections:
+  - name: "perusahaan"
+    label: "🏢 Profil Perusahaan"
+    files:
+      - label: "Umum"
+        name: "umum"
+        file: "data/perusahaan.json"
+        fields:
+          - {label: "Nama Travel", name: "nama", widget: "string"}
+          - {label: "Tagline Hero", name: "tagline", widget: "string"}
+          - {label: "WhatsApp (Format: 62xx)", name: "whatsapp", widget: "string"}
+          - {label: "Email", name: "email", widget: "string"}
+          - {label: "Alamat", name: "alamat", widget: "string"}
+          - {label: "Instagram URL", name: "instagram", widget: "string"}
+
+  - name: "layanan"
+    label: "🚐 Daftar Layanan"
+    folder: "data"
+    filter: {field: "id", value: ".*"} # Filtering to avoid mixing with other json files if any
+    extension: "json"
+    format: "json"
+    create: true
+    slug: "{{nama}}"
+    # Decap CMS works better with one file per item if using folder, 
+    # but we can use a single file approach (similar to Pages CMS) 
+    # if we define it as a list in a single file:
+  
+  - name: "data_layanan"
+    label: "🚐 Kelola Layanan"
+    files:
+      - label: "List Layanan"
+        name: "list_layanan"
+        file: "data/layanan.json"
+        fields:
+          - label: "Layanan"
+            name: "layanan"
+            widget: "list"
+            fields:
+              - {label: "Nama Layanan", name: "nama", widget: "string"}
+              - {label: "Deskripsi", name: "deskripsi", widget: "text"}
+              - {label: "Icon (FontAwesome)", name: "icon", widget: "string"}
+              - {label: "Link Page", name: "link", widget: "string"}
+
+  - name: "data_rute"
+    label: "🛣️ Kelola Rute"
+    files:
+      - label: "List Rute"
+        name: "list_rute"
+        file: "data/rute.json"
+        fields:
+          - label: "Rute"
+            name: "rute"
+            widget: "list"
+            fields:
+              - {label: "Dari", name: "asal", widget: "string"}
+              - {label: "Tujuan", name: "tujuan", widget: "string"}
+              - {label: "Harga", name: "harga", widget: "string"}
+              - {label: "Keterangan", name: "keterangan", widget: "string"}

@@ -1,20 +1,22 @@
-[
-  {
-    "asal": "Bandung",
-    "tujuan": "Jakarta (Pusat/Selatan)",
-    "harga": "150.000",
-    "keterangan": "Berangkat setiap jam"
-  },
-  {
-    "asal": "Bandung",
-    "tujuan": "Jakarta (Barat/Utara)",
-    "harga": "165.000",
-    "keterangan": "Berangkat setiap jam"
-  },
-  {
-    "asal": "Bandung",
-    "tujuan": "Bandara Soetta",
-    "harga": "200.000",
-    "keterangan": "Jadwal fleksibel"
-  }
-]
+{
+  "rute": [
+    {
+      "asal": "Bandung",
+      "tujuan": "Jakarta (Pusat/Selatan)",
+      "harga": "150.000",
+      "keterangan": "Berangkat setiap jam"
+    },
+    {
+      "asal": "Bandung",
+      "tujuan": "Jakarta (Barat/Utara)",
+      "harga": "165.000",
+      "keterangan": "Berangkat setiap jam"
+    },
+    {
+      "asal": "Bandung",
+      "tujuan": "Bandara Soetta",
+      "harga": "200.000",
+      "keterangan": "Jadwal fleksibel"
+    }
+  ]
+}

@@ -36,7 +36,8 @@ async function syncCMSData() {
         const servicesContainer = document.getElementById('cms-services-container');
         if (servicesContainer) {
             const resLay = await fetch('data/layanan.json');
-            const layanan = await resLay.json();
+            const dataLay = await resLay.json();
+            const layanan = dataLay.layanan || [];
             
             servicesContainer.innerHTML = layanan.map(item => `
                 <div class="service-card">
@@ -59,7 +60,8 @@ async function syncCMSData() {
         const routesContainer = document.getElementById('cms-routes-container');
         if (routesContainer) {
             const resRute = await fetch('data/rute.json');
-            const rute = await resRute.json();
+            const dataRute = await resRute.json();
+            const rute = dataRute.rute || [];
             
             routesContainer.innerHTML = rute.map(item => `
                 <div class="route-card">
