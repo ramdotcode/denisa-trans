@@ -23,18 +23,6 @@ collections:
           - {label: "Alamat", name: "alamat", widget: "string"}
           - {label: "Instagram URL", name: "instagram", widget: "string"}
 
-  - name: "layanan"
-    label: "🚐 Daftar Layanan"
-    folder: "data"
-    filter: {field: "id", value: ".*"} # Filtering to avoid mixing with other json files if any
-    extension: "json"
-    format: "json"
-    create: true
-    slug: "{{nama}}"
-    # Decap CMS works better with one file per item if using folder, 
-    # but we can use a single file approach (similar to Pages CMS) 
-    # if we define it as a list in a single file:
-  
   - name: "data_layanan"
     label: "🚐 Kelola Layanan"
     files:
