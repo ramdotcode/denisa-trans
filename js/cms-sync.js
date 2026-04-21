@@ -40,14 +40,13 @@ async function syncCMSData() {
             const layanan = dataLay.layanan || [];
             
             servicesContainer.innerHTML = layanan.map(item => `
-                <div class="service-card">
+                <div class="service-card" onclick="window.location.href='${item.link}'" style="cursor: pointer;">
                     <div class="service-img" style="background-image: url('${item.gambar}');"></div>
                     <div class="service-content">
                         <h3>${item.nama}</h3>
                         <p>${item.deskripsi}</p>
                         <div style="display: flex; align-items: center; gap: 15px; margin-top: 15px;">
-                             <a href="https://wa.me/${perusahaan.whatsapp}" style="color: var(--primary); font-weight: 700;">Pesan <i class="fas fa-arrow-right"></i></a>
-                             <a href="${item.link}" style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600; border-bottom: 1px solid #ddd;">Lihat Detail</a>
+                             <a href="https://wa.me/${perusahaan.whatsapp}" style="color: var(--primary); font-weight: 700;" onclick="event.stopPropagation();">Pesan Sekarang <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
