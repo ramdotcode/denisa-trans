@@ -574,8 +574,33 @@ footer {
 }
 
 .route-card:hover {
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
     transform: translateY(-5px);
+}
+
+.route-group h2 {
+    position: relative;
+    padding-left: 20px;
+    border-left: 5px solid var(--secondary);
+}
+
+.route-item-mini {
+    background: var(--light);
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--dark);
+    display: flex;
+    align-items: center;
+    border-left: 3px solid var(--secondary);
+    transition: 0.3s;
+}
+
+.route-item-mini:hover {
+    background: var(--primary);
+    color: var(--white);
+    transform: scale(1.05);
 }
 
 .route-header {

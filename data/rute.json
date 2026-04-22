@@ -1,22 +1,140 @@
 {
   "rute": [
     {
-      "asal": "Bandung",
-      "tujuan": "Jakarta (Pusat/Selatan)",
-      "harga": "150.000",
-      "keterangan": "Berangkat setiap jam"
-    },
-    {
-      "asal": "Bandung",
-      "tujuan": "Jakarta (Barat/Utara)",
-      "harga": "165.000",
-      "keterangan": "Berangkat setiap jam"
-    },
-    {
-      "asal": "Bandung",
+      "asal": "Cianjur",
       "tujuan": "Bandara Soetta",
-      "harga": "200.000",
-      "keterangan": "Jadwal fleksibel"
+      "harga": "Terjangkau",
+      "keterangan": "Door to Door Service",
+      "populer": true
+    },
+    {
+      "asal": "Cianjur",
+      "tujuan": "Bogor",
+      "harga": "Terjangkau",
+      "keterangan": "Door to Door Service"
+    },
+    {
+      "asal": "Cianjur",
+      "tujuan": "Depok",
+      "harga": "Terjangkau",
+      "keterangan": "Door to Door Service"
+    },
+    {
+      "asal": "Cianjur",
+      "tujuan": "Jakarta",
+      "harga": "Terjangkau",
+      "keterangan": "Door to Door Service",
+      "populer": true
+    },
+    {
+      "asal": "Cianjur",
+      "tujuan": "Tangerang",
+      "harga": "Terjangkau",
+      "keterangan": "Door to Door Service"
+    },
+    {
+      "asal": "Cianjur",
+      "tujuan": "Bekasi",
+      "harga": "Terjangkau",
+      "keterangan": "Door to Door Service"
+    },
+    {
+      "asal": "Cianjur",
+      "tujuan": "Karawang",
+      "harga": "Terjangkau",
+      "keterangan": "Door to Door Service"
+    },
+    {
+      "asal": "Cianjur",
+      "tujuan": "Cirebon",
+      "harga": "Terjangkau",
+      "keterangan": "Door to Door Service"
+    },
+    {
+      "asal": "Cianjur",
+      "tujuan": "Jawa Tengah",
+      "harga": "Terjangkau",
+      "keterangan": "Door to Door Service"
+    },
+    {
+      "asal": "Cianjur",
+      "tujuan": "Jawa Timur",
+      "harga": "Terjangkau",
+      "keterangan": "Door to Door Service"
+    },
+    {
+      "asal": "Cianjur",
+      "tujuan": "Bali",
+      "harga": "Terjangkau",
+      "keterangan": "Door to Door Service"
+    },
+    {
+      "asal": "Sukabumi",
+      "tujuan": "Bandara Soetta",
+      "harga": "Terjangkau",
+      "keterangan": "Door to Door Service",
+      "populer": true
+    },
+    {
+      "asal": "Sukabumi",
+      "tujuan": "Bogor",
+      "harga": "Terjangkau",
+      "keterangan": "Door to Door Service"
+    },
+    {
+      "asal": "Sukabumi",
+      "tujuan": "Depok",
+      "harga": "Terjangkau",
+      "keterangan": "Door to Door Service"
+    },
+    {
+      "asal": "Sukabumi",
+      "tujuan": "Jakarta",
+      "harga": "Terjangkau",
+      "keterangan": "Door to Door Service",
+      "populer": true
+    },
+    {
+      "asal": "Sukabumi",
+      "tujuan": "Tangerang",
+      "harga": "Terjangkau",
+      "keterangan": "Door to Door Service"
+    },
+    {
+      "asal": "Sukabumi",
+      "tujuan": "Bekasi",
+      "harga": "Terjangkau",
+      "keterangan": "Door to Door Service"
+    },
+    {
+      "asal": "Sukabumi",
+      "tujuan": "Karawang",
+      "harga": "Terjangkau",
+      "keterangan": "Door to Door Service"
+    },
+    {
+      "asal": "Sukabumi",
+      "tujuan": "Cirebon",
+      "harga": "Terjangkau",
+      "keterangan": "Door to Door Service"
+    },
+    {
+      "asal": "Sukabumi",
+      "tujuan": "Jawa Tengah",
+      "harga": "Terjangkau",
+      "keterangan": "Door to Door Service"
+    },
+    {
+      "asal": "Sukabumi",
+      "tujuan": "Jawa Timur",
+      "harga": "Terjangkau",
+      "keterangan": "Door to Door Service"
+    },
+    {
+      "asal": "Sukabumi",
+      "tujuan": "Bali",
+      "harga": "Terjangkau",
+      "keterangan": "Door to Door Service"
     }
   ]
 }
