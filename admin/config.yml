@@ -54,3 +54,32 @@ collections:
               - {label: "Tujuan", name: "tujuan", widget: "string"}
               - {label: "Harga", name: "harga", widget: "string"}
               - {label: "Keterangan", name: "keterangan", widget: "string"}
+
+  - name: "data_fasilitas"
+    label: "🛠️ Kelola Fasilitas"
+    files:
+      - label: "List Fasilitas"
+        name: "list_fasilitas"
+        file: "data/fasilitas.json"
+        fields:
+          - label: "Fasilitas"
+            name: "fasilitas"
+            widget: "list"
+            fields:
+              - {label: "Nama Fasilitas", name: "nama", widget: "string"}
+              - {label: "Deskripsi", name: "deskripsi", widget: "text"}
+              - {label: "Icon (FontAwesome)", name: "icon", widget: "string"}
+
+  - name: "data_galeri"
+    label: "📂 Galeri Foto"
+    files:
+      - label: "Koleksi Foto"
+        name: "koleksi_foto"
+        file: "data/galeri.json"
+        fields:
+          - label: "Foto"
+            name: "foto"
+            widget: "list"
+            fields:
+              - {label: "Judul Foto", name: "title", widget: "string"}
+              - {label: "File Gambar", name: "image", widget: "image"}

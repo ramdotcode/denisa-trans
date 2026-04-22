@@ -1,0 +1,36 @@
+{
+  "foto": [
+    {
+      "title": "Toyota Hiace 1",
+      "image": "hiace1.png"
+    },
+    {
+      "title": "Toyota Hiace 2",
+      "image": "hiace2.webp"
+    },
+    {
+      "title": "Toyota Hiace 3",
+      "image": "hiace3.png"
+    },
+    {
+      "title": "Toyota Innova 1",
+      "image": "innova1.png"
+    },
+    {
+      "title": "Toyota Innova 2",
+      "image": "innova2.jpg"
+    },
+    {
+      "title": "Toyota Innova 3",
+      "image": "innova3.jpg"
+    },
+    {
+      "title": "Toyota Innova 4",
+      "image": "innova4.webp"
+    },
+    {
+      "title": "Toyota Innova 5",
+      "image": "innova5.png"
+    }
+  ]
+}

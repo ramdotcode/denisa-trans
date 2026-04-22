@@ -99,6 +99,36 @@ async function syncCMSData() {
             `).join('');
         }
 
+        // 4. Sync Facilities (Fasilitas Page)
+        const fasilitasContainer = document.getElementById('cms-fasilitas-container');
+        if (fasilitasContainer) {
+            const resFas = await fetch('data/fasilitas.json');
+            const dataFas = await resFas.json();
+            const fasilitas = dataFas.fasilitas || [];
+
+            fasilitasContainer.innerHTML = fasilitas.map(item => `
+                <div class="route-card" style="text-align: center;">
+                    <div style="width: 80px; height: 80px; background: rgba(0, 86, 179, 0.1); color: var(--primary); border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; margin: 0 auto 20px;">
+                        <i class="${item.icon}"></i>
+                    </div>
+                    <h3>${item.nama}</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">${item.deskripsi}</p>
+                </div>
+            `).join('');
+        }
+
+        // 5. Sync Gallery (Home & Fasilitas Page)
+        const galleryContainer = document.getElementById('cms-gallery-container');
+        if (galleryContainer) {
+            const resGal = await fetch('data/galeri.json');
+            const dataGal = await resGal.json();
+            const galeri = dataGal.foto || [];
+
+            galleryContainer.innerHTML = galeri.map(item => `
+                <div class="gallery-item" style="background-image: url('${item.image}'); background-size: cover; background-position: center; border:none;" title="${item.title}"></div>
+            `).join('');
+        }
+
     } catch (error) {
         console.error('Error syncing CMS data:', error);
     }
