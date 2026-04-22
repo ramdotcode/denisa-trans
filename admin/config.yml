@@ -2,7 +2,7 @@ backend:
   name: github
   repo: ramdotcode/denisa-trans
   branch: main
-  base_url: https://netlify-cms-github-oauth-provider-eight.vercel.app/callback
+  base_url: https://decap-proxy.ramdotcode.workers.dev
   auth_endpoint: auth
 
 media_folder: "assets/images"
