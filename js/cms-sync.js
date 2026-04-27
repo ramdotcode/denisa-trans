@@ -108,7 +108,7 @@ async function syncCMSData() {
 
             fasilitasContainer.innerHTML = fasilitas.map(item => `
                 <div class="route-card" style="text-align: center;">
-                    <div style="width: 80px; height: 80px; background: rgba(0, 86, 179, 0.1); color: var(--primary); border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; margin: 0 auto 20px;">
+                    <div style="width: 80px; height: 80px; background: rgba(165, 28, 28, 0.1); color: var(--primary); border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; margin: 0 auto 20px;">
                         <i class="${item.icon}"></i>
                     </div>
                     <h3>${item.nama}</h3>
@@ -127,6 +127,101 @@ async function syncCMSData() {
             galleryContainer.innerHTML = galeri.map(item => `
                 <div class="gallery-item" style="background-image: url('${item.image}'); background-size: cover; background-position: center; border:none;" title="${item.title}"></div>
             `).join('');
+        }
+
+        // 6. Sync Armada (Home Page)
+        const armadaContainer = document.getElementById('cms-armada-container');
+        if (armadaContainer) {
+            const resArm = await fetch('data/armada.json');
+            const dataArm = await resArm.json();
+            const armadaList = dataArm.armada || [];
+
+            armadaContainer.innerHTML = armadaList.map(item => {
+                const images = Array.isArray(item.gambar) ? item.gambar : [item.gambar];
+                const sliderHtml = images.map((img, idx) => `
+                    <div class="slide ${idx === 0 ? 'active' : ''}" style="background-image: url('${img}');"></div>
+                `).join('');
+
+                const indicatorsHtml = images.map((_, idx) => `
+                    <div class="slider-dot ${idx === 0 ? 'active' : ''}"></div>
+                `).join('');
+
+                return `
+                    <div class="service-card">
+                        <div class="service-img">
+                            <div class="card-slider">
+                                ${sliderHtml}
+                                ${images.length > 1 ? `
+                                <div class="slider-nav">
+                                    <button class="prev-btn" onclick="event.stopPropagation();"><i class="fas fa-chevron-left"></i></button>
+                                    <button class="next-btn" onclick="event.stopPropagation();"><i class="fas fa-chevron-right"></i></button>
+                                </div>
+                                <div class="slider-dots">
+                                    ${indicatorsHtml}
+                                </div>
+                                ` : ''}
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                <h3 style="margin: 0;">${item.nama}</h3>
+                                <span style="background: var(--light); color: var(--primary); padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 700;">${item.kapasitas}</span>
+                            </div>
+                            <p>${item.deskripsi}</p>
+                            <div style="margin-top: 15px;">
+                                <a href="https://wa.me/${perusahaan.whatsapp}?text=Halo Denisa Trans, saya ingin tanya sewa armada ${item.nama}" class="btn-booking" style="display: block; text-align: center; font-size: 0.9rem;">Tanya Sewa <i class="fab fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            // Initialize interactive sliders
+            const sliders = document.querySelectorAll('.card-slider');
+            sliders.forEach(slider => {
+                const slides = slider.querySelectorAll('.slide');
+                const dots = slider.querySelectorAll('.slider-dot');
+                const nextBtn = slider.querySelector('.next-btn');
+                const prevBtn = slider.querySelector('.prev-btn');
+                
+                if (slides.length <= 1) return;
+
+                let current = 0;
+                let interval;
+
+                const showSlide = (index) => {
+                    slides.forEach(s => s.classList.remove('active'));
+                    dots.forEach(d => d.classList.remove('active'));
+                    
+                    current = (index + slides.length) % slides.length;
+                    slides[current].classList.add('active');
+                    dots[current].classList.add('active');
+                };
+
+                const startAuto = () => {
+                    interval = setInterval(() => showSlide(current + 1), 3000);
+                };
+
+                const stopAuto = () => clearInterval(interval);
+
+                if(nextBtn) {
+                    nextBtn.onclick = () => {
+                        stopAuto();
+                        showSlide(current + 1);
+                        startAuto();
+                    };
+                }
+
+                if(prevBtn) {
+                    prevBtn.onclick = () => {
+                        stopAuto();
+                        showSlide(current - 1);
+                        startAuto();
+                    };
+                }
+
+                startAuto();
+            });
         }
 
     } catch (error) {

@@ -15,7 +15,7 @@
     <header id="header" class="scrolled">
         <div class="container">
             <nav>
-                <a href="index.html" class="logo">DENISA <span>TRANS</span></a>
+                <a href="index.html" class="logo"><img src="assets/LogoDenisaTransNoBg.png" alt="Denisa Trans" style="height: 50px; object-fit: contain;"></a>
                 <div class="menu-toggle" id="mobile-menu">
                     <span></span>
                     <span></span>
@@ -43,7 +43,7 @@
     </header>
 
     <!-- Page Header -->
-    <section class="page-header" style="background: linear-gradient(rgba(0, 86, 179,0.9), rgba(0, 86, 179,0.9)), url('service-rental.png') center/cover;">
+    <section class="page-header" style="background: linear-gradient(rgba(165, 28, 28,0.9), rgba(165, 28, 28,0.9)), url('assets/innovaDenisa.jpeg') center/cover;">
         <div class="container">
             <h1>Rental & Charter Mobil</h1>
             <p>Sewa Armada Premium Lengkap dengan Driver Berpengalaman</p>
@@ -55,7 +55,7 @@
         <div class="container">
             <div class="services-grid" style="align-items: center; gap: 50px;">
                 <div style="border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-lg);">
-                    <img src="service-rental.png" alt="Rental Mobil" style="width: 100%; display: block;">
+                    <img src="assets/innovaDenisa.jpeg" alt="Rental Mobil" style="width: 100%; display: block;">
                 </div>
                 <div>
                     <h2 style="font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; font-family: 'Outfit', sans-serif;">Pilihan Armada Terbaik</h2>
@@ -111,12 +111,25 @@
         </div>
     </section>
 
+    <!-- Armada Section -->
+    <section class="section" id="armada">
+        <div class="container">
+            <div class="section-header">
+                <h2>Pilihan Armada Kami</h2>
+                <p>Kendaraan prima dan terawat mulai dari mobil pribadi hingga bus pariwisata siap menemani perjalanan Anda.</p>
+            </div>
+            <div class="services-grid" id="cms-armada-container">
+                <!-- Data will be loaded from data/armada.json -->
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer id="contact">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h2 class="logo" style="color: white; margin-bottom: 20px;">DENISA <span>TRANS</span></h2>
+                    <h2 class="logo" style="color: white; margin-bottom: 20px;"><img src="assets/LogoDenisaTransNoBg.png" alt="Denisa Trans" style="height: 50px; object-fit: contain;"></h2>
                     <p style="color: #ccc;">Layanan Travel & Transportasi terpercaya di Bandung. Mengedepankan kenyamanan dan keamanan penumpang.</p>
                 </div>
                 <div class="footer-col">
@@ -183,5 +196,6 @@
             });
         });
     </script>
+    <script src="js/cms-sync.js"></script>
 </body>
 </html>

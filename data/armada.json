@@ -1,0 +1,28 @@
+{
+  "armada": [
+    {
+      "nama": "Big Bus Denisa",
+      "deskripsi": "Armada bus besar dengan kapasitas hingga 50 kursi, cocok untuk pariwisata rombongan besar, kunjungan industri, atau ziarah. Fasilitas lengkap dengan AC, TV, Karaoke, dan bagasi luas.",
+      "gambar": ["assets/BigBusDenisa.jpeg", "assets/BigBusDenisa2.jpeg"],
+      "kapasitas": "45-50 Kursi"
+    },
+    {
+      "nama": "Medium Bus Denisa",
+      "deskripsi": "Bus ukuran menengah yang fleksibel untuk rombongan keluarga atau kantor dengan kapasitas sekitar 30 orang. Menawarkan kenyamanan ekstra dengan suspensi empuk dan interior mewah.",
+      "gambar": ["assets/MediumBusDenisa.jpeg", "assets/MediumBusDenisa2.jpeg"],
+      "kapasitas": "29-31 Kursi"
+    },
+    {
+      "nama": "Toyota Hiace",
+      "deskripsi": "Armada favorit untuk travel door-to-door dan tour wisata kecil. Dikenal dengan kabin yang sangat nyaman, plafon tinggi, dan kenyamanan setara mobil pribadi.",
+      "gambar": ["assets/HiaceDenisa.jpeg", "assets/HiaceDenisa2.jpeg", "assets/HiaceDenisa3.jpeg"],
+      "kapasitas": "14 Kursi"
+    },
+    {
+      "nama": "Toyota Innova",
+      "deskripsi": "Pilihan tepat untuk perjalanan privat atau carter eksklusif. Gesit dan nyaman untuk perjalanan keluarga kecil atau urusan bisnis antar kota.",
+      "gambar": ["assets/innovaDenisa.jpeg", "assets/InnovaDenisa2.jpeg", "assets/InnovaDenisa3.jpeg"],
+      "kapasitas": "6 Kursi"
+    }
+  ]
+}

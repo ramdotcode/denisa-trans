@@ -5,8 +5,8 @@ backend:
   base_url: https://decap-proxy.ramdotcode.workers.dev
   auth_endpoint: auth
 
-media_folder: "assets/images"
-public_folder: "/assets/images"
+media_folder: "assets"
+public_folder: "/assets"
 
 collections:
   - name: "perusahaan"
@@ -83,3 +83,19 @@ collections:
             fields:
               - {label: "Judul Foto", name: "title", widget: "string"}
               - {label: "File Gambar", name: "image", widget: "image"}
+
+  - name: "data_armada"
+    label: "🚐 Kelola Armada"
+    files:
+      - label: "List Armada"
+        name: "list_armada"
+        file: "data/armada.json"
+        fields:
+          - label: "Armada"
+            name: "armada"
+            widget: "list"
+            fields:
+              - {label: "Nama Kendaraan", name: "nama", widget: "string"}
+              - {label: "Kapasitas", name: "kapasitas", widget: "string"}
+              - {label: "Deskripsi", name: "deskripsi", widget: "text"}
+              - {label: "Gambar Armada", name: "gambar", widget: "image"}
